@@ -24,7 +24,7 @@ class AthleteModel(Base):
             'id': self.id,
             'subject_id': self.subject_id,
             'strava_id': self.strava_id,
-            'activities': [activity.to_dict() for activity in self.activities] if self.activities else []
+            'activity_count': len(self.activities)
         }
 
     @classmethod
